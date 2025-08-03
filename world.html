@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World Cup</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: radial-gradient(circle, #5f00ba, #1a001a);
+      color: white;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-y: auto;
+    }
+
+    .title {
+      margin-top: 40px;
+      font-size: 3em;
+      text-align: center;
+      animation: pulseGlow 2s infinite alternate;
+      text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff9900;
+    }
+
+    @keyframes pulseGlow {
+      from { opacity: 0.7; transform: scale(1); }
+      to { opacity: 1; transform: scale(1.05); }
+    }
+
+    .question-block {
+      margin-top: 40px;
+      width: 80%;
+      max-width: 800px;
+      background-color: rgba(0, 0, 0, 0.4);
+      border: 2px solid #ff00ff;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 0 15px #ff00ff;
+    }
+
+    .question {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      color: #ffccff;
+      text-shadow: 0 0 8px #ff00ff;
+    }
+
+    .answer {
+      font-size: 1.2em;
+      line-height: 1.6;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <div class="title">What is World Cup?</div>
+
+  <div class="question-block">
+    <div class="question">Q1: What is World Cup?</div>
+    <div class="answer">
+      The Cricket World Cup is a major international cricket tournament held every year, organized by the Gully Cricket Council (GCC). It's a T-10 competition where national teams compete for the coveted trophy.
+    </div>
+  </div>
+
+  <div class="question-block">
+    <div class="question">Q2: How many teams participate?</div>
+    <div class="answer">
+      Typically, 10 national teams compete in the T-10 World Cup, representing different regions and street cricket legacies.
+    </div>
+  </div>
+
+  <div class="question-block">
+    <div class="question">Q3: What makes T-10 unique?</div>
+    <div class="answer">
+      It's fast, furious, and full of drama — each side gets just 10 overs, making strategy and aggression key to victory.
+    </div>
+  </div>
+
+  <div class="question-block">
+    <div class="question">Q4: Who won last season?</div>
+    <div class="answer">
+      Last year, the West Indies stunned everyone with back-to-back wins, clinching the title against Sri Lanka.
+    </div>
+  </div>
+</body>
+</html>

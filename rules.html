@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rules</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 30px;
+      background-color: #000020;
+      font-family: 'Courier New', monospace;
+      color: white;
+      animation: glitchBg 2s infinite;
+    }
+
+    @keyframes glitchBg {
+      0% { background-color: #000020; }
+      25% { background-color: #001040; }
+      50% { background-color: #002060; }
+      75% { background-color: #001040; }
+      100% { background-color: #000020; }
+    }
+
+    h1, h2 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      color: cyan;
+      animation: glowText 2s infinite alternate;
+    }
+
+    @keyframes glowText {
+      0% {
+        text-shadow:
+          0 0 8px #00f,
+          0 0 16px #0ff,
+          0 0 24px #00f;
+      }
+      100% {
+        text-shadow:
+          0 0 12px #00ffff,
+          0 0 24px #00f,
+          0 0 36px #0ff;
+      }
+    }
+
+    .section {
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+      background: linear-gradient(135deg, #000060aa, #0020aa44);
+      border-radius: 20px;
+      box-shadow: 0 0 20px #00f;
+      animation: pulseBg 6s infinite;
+    }
+
+    @keyframes pulseBg {
+      0% { filter: hue-rotate(0deg); }
+      50% { filter: hue-rotate(180deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+
+    .section p, .section li {
+      font-size: 1.2em;
+      margin-bottom: 12px;
+      line-height: 1.6;
+      text-shadow: 0 0 3px #00ffff;
+    }
+
+    .section ul {
+      padding-left: 20px;
+    }
+
+    .thank-you {
+      text-align: center;
+      font-size: 1.8em;
+      margin-top: 30px;
+      color: #00ffff;
+      text-shadow: 0 0 15px #00f;
+      animation: flicker 1.5s infinite;
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello Everyone</h1>
+
+  <div class="section">
+    <h2>Timings</h2>
+    <p>Monday to Friday — <strong>6:00pm to 8:00pm</strong></p>
+    <p>Saturday and Sunday — <strong>8:30am to 11:00am</strong></p>
+
+    <h2>Rules</h2>
+    <ul>
+      <li>Players coming after <strong>6:50pm</strong> (evening) or <strong>9:10am</strong> (morning) will do empiring.</li>
+      <li>There will be a <strong>3 over powerplay</strong>.</li>
+      <li>Each team can change their keeper only <strong>three times</strong>.</li>
+      <li><strong>3 players</strong> can bowl a maximum of <strong>3 overs</strong> each.</li>
+      <li><strong>Umpire decision</strong> is the final decision.</li>
+    </ul>
+  </div>
+
+  <div class="thank-you">THANK YOU 🎮</div>
+</body>
+</html>

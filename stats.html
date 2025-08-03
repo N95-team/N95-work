@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Match Stats</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #330033, #660066, #990099);
+      animation: purpleShift 7s infinite linear;
+      height: 100vh;
+      font-family: 'Courier New', monospace;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    @keyframes purpleShift {
+      0% { filter: hue-rotate(0deg); }
+      50% { filter: hue-rotate(180deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+
+    .main-title {
+      margin-top: 60px;
+      font-size: 3em;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 0 0 20px #cc00cc, 0 0 30px #ff00ff;
+      animation: titlePulse 2s infinite alternate;
+    }
+
+    @keyframes titlePulse {
+      from { opacity: 0.8; transform: scale(1); }
+      to { opacity: 1; transform: scale(1.07); }
+    }
+
+    .stats-note {
+      margin-top: 30px;
+      font-size: 1.5em;
+      color: #eeeeee;
+      text-align: center;
+    }
+
+    .link-button {
+      margin-top: 25px;
+      font-size: 1.3em;
+      color: #33ccff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .link-button:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-title">GET ALL THE STATS OF MATCHES AT ONCE</div>
+
+  <div class="stats-note">We will try to write stats when we have the photos of notebook :)</div>
+
+  <a href="table.html" class="link-button">View Points Table</a>
+  <a href="captains.html" class="link-button">View Captains of their Team</a>
+</body>
+</html>

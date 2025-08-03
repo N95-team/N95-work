@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Captains</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 30px;
+      background: linear-gradient(135deg, #1a001a, #300030);
+      color: white;
+      font-family: 'Courier New', monospace;
+      animation: rgbFlow 10s infinite linear;
+    }
+
+    @keyframes rgbFlow {
+      0% { filter: hue-rotate(0deg); }
+      50% { filter: hue-rotate(180deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      text-shadow: 0 0 20px #ff00ff, 0 0 30px #00ffff;
+      animation: headerPulse 2s infinite alternate;
+      margin-bottom: 40px;
+    }
+
+    @keyframes headerPulse {
+      from { opacity: 0.8; transform: scale(1); }
+      to { opacity: 1; transform: scale(1.05); }
+    }
+
+    .group {
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.4);
+      border: 2px solid #ff00ff;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #ff00ff;
+      width: 80%;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .group-title {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    .team {
+      font-size: 1.3em;
+      margin: 8px 0;
+      text-shadow: 0 0 5px #ffff00;
+    }
+
+    .team span {
+      color: #ff66ff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Captains of T-10 World Cup Teams</h1>
+
+  <div class="group">
+    <div class="group-title">Group A</div>
+    <div class="team">India — <span>Neerav</span></div>
+    <div class="team">Ireland — <span>Akkie</span></div>
+    <div class="team">Netherlands — <span>Ayush</span></div>
+    <div class="team">Sri Lanka — <span>Zamam</span></div>
+  </div>
+
+  <div class="group">
+    <div class="group-title">Group B</div>
+    <div class="team">Australia — <span>Aaryan</span></div>
+    <div class="team">England — <span>Naitik</span></div>
+    <div class="team">South Africa — <span>Vignesh</span></div>
+    <div class="team">New Zealand — <span>Khusagra</span></div>
+  </div>
+
+  <div class="group">
+    <div class="group-title">Group C</div>
+    <div class="team">Afghanistan — <span>Darsh</span></div>
+    <div class="team">Bangladesh — <span>Shaurya</span></div>
+    <div class="team">West Indies — <span>Earth</span></div>
+    <div class="team">Canada — <span>Arsh</span></div>
+  </div>
+
+  <div class="group">
+    <div class="group-title">Group D</div>
+    <div class="team">Scotland — <span>Akshit Jha</span></div>
+    <div class="team">Nepal — <span>Tejas</span></div>
+    <div class="team">Uganda — <span>Adi</span></div>
+    <div class="team">USA — <span>Shreyash</span> (Subh if he returns)</div>
+  </div>
+</body>
+</html>

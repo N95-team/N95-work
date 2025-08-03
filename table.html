@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Points Table</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: radial-gradient(circle at center, #300030, #0a0010);
+      font-family: 'Courier New', monospace;
+      color: white;
+      animation: huePulse 10s infinite linear;
+    }
+
+    @keyframes huePulse {
+      0% { filter: hue-rotate(0deg); }
+      50% { filter: hue-rotate(180deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+
+    h2 {
+      text-align: center;
+      margin: 40px 0 20px;
+      font-size: 2em;
+      text-shadow: 0 0 10px #ff00ff;
+      animation: titleGlow 2s infinite alternate;
+    }
+
+    @keyframes titleGlow {
+      from { opacity: 0.7; }
+      to { opacity: 1; text-shadow: 0 0 20px #00ffff; }
+    }
+
+    .table-wrapper {
+      margin-bottom: 20px;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      box-shadow: 0 0 15px #ff00ff;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #ff00ff;
+      color: #fff;
+      font-size: 1em;
+    }
+
+    th {
+      background: linear-gradient(45deg, #ff00ff, #00ffff);
+      color: black;
+      text-shadow: none;
+    }
+
+    tr:hover {
+      background-color: rgba(255, 0, 255, 0.2);
+      transition: background 0.3s ease;
+    }
+
+    .button-row {
+      text-align: center;
+      margin: 10px 0 40px;
+    }
+
+    .button-row button {
+      padding: 10px 20px;
+      margin: 5px;
+      background: linear-gradient(45deg, #ff00ff, #00ffff);
+      border: none;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function showNRR() {
+      alert("Net Run Rate (NRR) = (Total runs scored / Total overs faced) − (Total runs conceded / Total overs bowled)\n\nIt reflects how efficiently a team scores compared to how much it concedes.");
+    }
+  </script>
+</head>
+<body>
+
+<h2>Group A</h2>
+<div class="table-wrapper">
+  <table>
+    <tr>
+      <th>Position</th>
+      <th>Team</th>
+      <th>WON</th>
+      <th>LOST</th>
+      <th>Points</th>
+      <th>NRR</th>
+    </tr>
+    <tr><td>1</td><td>Sri Lanka (Q)</td><td>2</td><td>0</td><td>4</td><td>+2.00</td></tr>
+    <tr><td>2</td><td>Netherlands (Q)</td><td>2</td><td>0</td><td>4</td><td>+1.40</td></tr>
+    <tr><td>3</td><td>Ireland (Disqualified)</td><td>0</td><td>2</td><td>0</td><td>-1.15</td></tr>
+    <tr><td>4</td><td>India (Disqualified)</td><td>0</td><td>2</td><td>0</td><td>-1.75</td></tr>
+  </table>
+</div>
+<div class="button-row">
+  <a href="help.html"><button>Any problem? Click here</button></a>
+  <button onclick="showNRR()">How are net run rate calculated</button>
+</div>
+
+<h2>Group B</h2>
+<div class="table-wrapper">
+  <table>
+    <tr>
+      <th>Position</th>
+      <th>Team</th>
+      <th>WON</th>
+      <th>LOST</th>
+      <th>Points</th>
+      <th>NRR</th>
+    </tr>
+    <tr><td>1</td><td>England</td><td>1</td><td>0</td><td>2</td><td>+1.20</td></tr>
+    <tr><td>2</td><td>South Africa</td><td>1</td><td>0</td><td>2</td><td>+0.90</td></tr>
+    <tr><td>3</td><td>Australia</td><td>0</td><td>1</td><td>0</td><td>-0.10</td></tr>
+    <tr><td>4</td><td>New Zealand</td><td>0</td><td>1</td><td>0</td><td>0.05</td></tr>
+  </table>
+</div>
+<div class="button-row">
+  <a href="help.html"><button>Any problem? Click here</button></a>
+  <button onclick="showNRR()">How are net run rate calculated</button>
+</div>
+
+<h2>Group C</h2>
+<div class="table-wrapper">
+  <table>
+    <tr>
+      <th>Position</th>
+      <th>Team</th>
+      <th>WON</th>
+      <th>LOST</th>
+      <th>Points</th>
+      <th>NRR</th>
+    </tr>
+    <tr><td>1</td><td>Canada</td><td>0</td><td>0</td><td>0</td><td>+0.25</td></tr>
+    <tr><td>2</td><td>West Indies</td><td>0</td><td>0</td><td>0</td><td>0.00</td></tr>
+    <tr><td>3</td><td>Bangladesh</td><td>0</td><td>0</td><td>0</td><td>-0.15</td></tr>
+    <tr><td>4</td><td>Afghanistan</td><td>0</td><td>0</td><td>0</td><td>-0.20</td></tr>
+  </table>
+</div>
+<div class="button-row">
+  <a href="help.html"><button>Any problem? Click here</button></a>
+  <button onclick="showNRR()">How are net run rate calculated</button>
+</div>
+
+<h2>Group D</h2>
+<div class="table-wrapper">
+  <table>
+    <tr>
+      <th>Position</th>
+      <th>Team</th>
+      <th>WON</th>
+      <th>LOST</th>
+      <th>DRAW</th>
+      <th>Points</th>
+      <th>NRR</th>
+    </tr>
+    <tr><td>1</td><td>USA</td><td>1</td><td>0</td><td>1</td><td>3</td><td>+0.10</td></tr>
+    <tr><td>2</td><td>Scotland</td><td>1</td><td>0</td><td>0</td><td>2</td><td>+0.25</td></tr>
+    <tr><td>3</td><td>Nepal</td><td>0</td><td>1</td><td>0</td><td>0</td><td>-0.05</td></tr>
+    <tr><td>4</td><td>Uganda (Disqualified)</td><td>0</td><td>2</td><td>0</td><td>0</td><td>-0.50</td></tr>
+  </table>
+</div>
+<div class="button-row">
+  <a href="help.html"><button>Any problem? Click here</button></a>
+  <button onclick="showNRR()">How are net run rate calculated</button>
+</div>
+
+</body>
+</html>

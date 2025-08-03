@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Types of Groups</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: #00ffff;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      font-size: 18px;
+      margin-bottom: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #ccc;
+    }
+
+    .group-card {
+      display: inline-block;
+      width: 300px;
+      background: rgba(255,255,255,0.08);
+      border: 3px solid transparent;
+      border-image: linear-gradient(to right, #ff416c, #ff4b2b, #ffafbd) 1;
+      border-radius: 12px;
+      margin: 20px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0,255,255,0.4);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .group-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255,255,0,0.7);
+    }
+
+    .group-icon {
+      font-size: 36px;
+      color: #ffd700;
+      margin-bottom: 15px;
+    }
+
+    .group-title {
+      font-size: 22px;
+      color: #00ffff;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .group-details {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧠 What is a Group?</h1>
+  <div class="description">
+    A group is a digital space where individuals come together with shared interests, goals, or vibes — whether it's for strategy, entertainment, updates, or pure chaos. Groups can vary from focused discussions to unfiltered fun zones. Each one has its own energy and role in the community.
+  </div>
+
+  <div class="group-card" onclick="alert('Gully Cricket Council clicked!')">
+    <div class="group-icon"><i class="fas fa-cricket-bat-ball"></i></div>
+    <div class="group-title">Gully Cricket Council</div>
+    <div class="group-details">
+      A lively hub where cricket lovers share match updates, plan games, discuss player stats, and argue passionately over team selections. From street legends to fantasy tournaments — this council turns neighborhood cricket into epic saga.
+    </div>
+  </div>
+
+  <div class="group-card" onclick="alert('N95 Chit Chat clicked!')">
+    <div class="group-icon"><i class="fas fa-comments"></i></div>
+    <div class="group-title">N95 Chit Chat</div>
+    <div class="group-details">
+      A free-for-all chill zone. Spam, memes, emoji storms, midnight chaos — anything goes! It’s where rules bend for fun, conversations spiral, and every message adds flavor to the madness. Ideal for when your brain needs a nap and your fingers need a party.
+    </div>
+  </div>
+
+</body>
+</html>

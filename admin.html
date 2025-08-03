@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Portal</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .rgb-box {
+      margin: 30px auto;
+      padding: 30px;
+      width: 70%;
+      border: 4px solid;
+      border-image: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, magenta, red) 1;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.07);
+      box-shadow: 0 0 15px rgba(0,255,255,0.3);
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .button-group {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .glow-button {
+      padding: 12px 24px;
+      font-weight: bold;
+      border-radius: 8px;
+      border: none;
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+      background-size: 300% 300%;
+      animation: pulseGlow 4s infinite ease-in-out;
+      box-shadow: 0 0 12px #0ff;
+      transition: transform 0.2s ease;
+    }
+
+    .glow-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #fff;
+    }
+
+    @keyframes pulseGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="color:#0ff;">👑 WhatsApp Admin Overview</h1>
+
+  <div class="rgb-box">
+    An <strong>admin</strong> in WhatsApp is a member of a group chat who has elevated privileges. They can add or remove participants, change group info (like name, image, and description), and manage settings like group privacy. Admins maintain order, ensure rules are followed, and guide the community. Their role is crucial to keeping groups organized, safe, and respectful.
+  </div>
+
+  <div class="button-group">
+    <a href="vadmin.html" class="glow-button">🔍 View Admins</a>
+    <a href="hadmin.html" class="glow-button">📈 How to Become Admin</a>
+    <a href="whadmin.html" class="glow-button">🛠 What Admins Do</a>
+    <a href="tadmin.html" class="glow-button">🧩 Types of Admins</a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sri Lanka Matches</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #330000, #990000, #ff0000);
+      animation: redShift 6s infinite linear;
+      height: 100vh;
+      font-family: 'Courier New', monospace;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @keyframes redShift {
+      0% { filter: hue-rotate(0deg); }
+      50% { filter: hue-rotate(180deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+
+    .red-glow-title {
+      margin-top: 50px;
+      font-size: 3em;
+      font-weight: bold;
+      text-shadow: 0 0 20px #ff0033, 0 0 30px #ff3300;
+      animation: textPulse 2s infinite alternate;
+    }
+
+    @keyframes textPulse {
+      from { opacity: 0.8; transform: scale(1); }
+      to { opacity: 1; transform: scale(1.05); }
+    }
+
+    .match-box {
+      margin: 30px auto;
+      background: linear-gradient(45deg, #660000, #ff1a1a, #cc0000);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #ff3333;
+      max-width: 600px;
+      width: 90%;
+      text-align: center;
+      animation: boxGlow 3s infinite alternate;
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+
+    @keyframes boxGlow {
+      0% { transform: scale(1); filter: hue-rotate(0deg); }
+      50% { transform: scale(1.05); filter: hue-rotate(180deg); }
+      100% { transform: scale(1); filter: hue-rotate(360deg); }
+    }
+
+    .red-link {
+      display: block;
+      margin-top: 10px;
+      color: #ff6666;
+      font-weight: bold;
+      font-size: 1.1em;
+      text-decoration: none;
+    }
+
+    .red-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="red-glow-title">Sri Lanka Match Stats</div>
+
+  <div class="match-box">
+    Sri Lanka vs Ireland<br>
+    🏆 Sri Lanka won!
+    <a href="#" class="red-link">View Stats</a>
+  </div>
+
+  <div class="match-box">
+    Sri Lanka vs India<br>
+    🏆 Sri Lanka won!
+    <a href="#" class="red-link">View Stats</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>View Admins</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #0ff;
+      margin-bottom: 30px;
+    }
+
+    .admin-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .admin-item {
+      font-size: 20px;
+      font-weight: bold;
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .admin-link {
+      text-decoration: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      background-color: rgba(255,255,255,0.1);
+      box-shadow: 0 0 12px #0ff;
+      transition: transform 0.2s ease;
+    }
+
+    .admin-link:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #fff;
+    }
+
+    .removable {
+      font-style: italic;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>👥 WhatsApp Group Admins</h1>
+
+  <div class="admin-list">
+    <div class="admin-item"><a href="aadmin.html" class="admin-link">Aarav Pastor</a></div>
+    <div class="admin-item"><a href="radmin.html" class="admin-link">Rishabh</a></div>
+    <div class="admin-item"><a href="nadmin.html" class="admin-link">Neerav Kumar</a></div>
+    <div class="admin-item removable"><a href="eadmin.html" class="admin-link">Earth Ahuja</a> (Can be removed as community admin)</div>
+  </div>
+
+</body>
+</html>

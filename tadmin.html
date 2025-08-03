@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Types of Admins</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 50px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: #0ff;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      display: inline-block;
+      width: 250px;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.1);
+      border: 3px solid transparent;
+      border-image: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet) 1;
+      box-shadow: 0 0 12px rgba(0,255,255,0.5);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255,255,0,0.6);
+    }
+
+    .icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: #ff0;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #0ff;
+    }
+
+    .description {
+      font-size: 16px;
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+
+    .dropdown-section {
+      margin-top: 50px;
+    }
+
+    select, button {
+      padding: 10px 15px;
+      margin: 10px;
+      border-radius: 8px;
+      font-weight: bold;
+      border: none;
+      background: linear-gradient(45deg, cyan, blue, violet);
+      color: white;
+      cursor: pointer;
+    }
+
+    #differenceOutput {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #ff0;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌟 Types of Admins</h1>
+
+  <div class="card" onclick="alert('Head Moderator clicked!')">
+    <div class="icon"><i class="fas fa-user-shield"></i></div>
+    <div class="title">Head Moderator</div>
+    <div class="description">
+      Won elections twice. Leads team, resolves issues, posts messages, creates structure, assists others and ensures everything runs smoothly.
+    </div>
+  </div>
+
+  <div class="card" onclick="alert('Trial Moderator clicked!')">
+    <div class="icon"><i class="fas fa-user-check"></i></div>
+    <div class="title">Trial Moderator</div>
+    <div class="description">
+      Elected once. Shares posts, hosts events, supports head mods, updates data and builds trust through consistency.
+    </div>
+  </div>
+
+  <div class="card" onclick="alert('Temporary Moderator clicked!')">
+    <div class="icon"><i class="fas fa-user-clock"></i></div>
+    <div class="title">Temporary Moderator</div>
+    <div class="description">
+      Selected by an admin. Didn't win elections. Trust level low, may be removed. Performs limited tasks like messaging and basic hosting.
+    </div>
+  </div>
+
+  <div class="card" onclick="alert('Comic Sender clicked!')">
+    <div class="icon"><i class="fas fa-book-open"></i></div>
+    <div class="title">Comic Sending Moderator</div>
+    <div class="description">
+      Rare role. Posts comics only. Adds humor and energy. Doesn't handle admin tasks but boosts morale through fun content.
+    </div>
+  </div>
+
+  <div class="dropdown-section">
+    <h2 style="color:#0ff;">🔍 What's the Difference Between</h2>
+    <select id="role1">
+      <option value="">Select First Role</option>
+      <option value="Head Moderator">Head Moderator</option>
+      <option value="Trial Moderator">Trial Moderator</option>
+      <option value="Temporary Moderator">Temporary Moderator</option>
+      <option value="Comic Sending Moderator">Comic Sending Moderator</option>
+    </select>
+    <select id="role2">
+      <option value="">Select Second Role</option>
+      <option value="Head Moderator">Head Moderator</option>
+      <option value="Trial Moderator">Trial Moderator</option>
+      <option value="Temporary Moderator">Temporary Moderator</option>
+      <option value="Comic Sending Moderator">Comic Sending Moderator</option>
+    </select>
+    <button onclick="showDifference()">Compare</button>
+
+    <div id="differenceOutput"></div>
+  </div>
+
+  <script>
+    const differences = {
+      "Head Moderator|Trial Moderator": "Head Moderators guide the team and set rules; Trial Moderators support and grow through events.",
+      "Head Moderator|Temporary Moderator": "Head Mods are elected and lead; Temporary Mods are chosen and may lack trust or permanence.",
+      "Head Moderator|Comic Sending Moderator": "Head Mods handle management; Comic Mods share fun but have no admin powers.",
+      "Trial Moderator|Temporary Moderator": "Trial Mods have community support; Temporary Mods are picked and may be removed.",
+      "Trial Moderator|Comic Sending Moderator": "Trial Mods engage actively; Comic Mods entertain with comics only.",
+      "Temporary Moderator|Comic Sending Moderator": "Temporary Mods do admin work with doubt; Comic Mods contribute humor content.",
+    };
+
+    function showDifference() {
+      const r1 = document.getElementById("role1").value;
+      const r2 = document.getElementById("role2").value;
+      const output = document.getElementById("differenceOutput");
+
+      if (!r1 || !r2 || r1 === r2) {
+        output.textContent = "Please select two different roles.";
+        return;
+      }
+
+      const key1 = `${r1}|${r2}`;
+      const key2 = `${r2}|${r1}`;
+      output.textContent = differences[key1] || differences[key2] || "Difference not found.";
+    }
+  </script>
+
+</body>
+</html>

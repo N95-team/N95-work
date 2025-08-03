@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Help & Contact</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(270deg, #ff00ff, #00ffff, #ff0000);
+      background-size: 600% 600%;
+      animation: gradientShift 10s ease infinite;
+      font-family: 'Courier New', monospace;
+      color: white;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .contact-box {
+      text-align: center;
+      padding: 40px;
+      border: 2px solid #fff;
+      border-radius: 15px;
+      background-color: rgba(0, 0, 0, 0.6);
+      box-shadow: 0 0 20px #ff00ff;
+      animation: pulseGlow 2s infinite alternate;
+    }
+
+    @keyframes pulseGlow {
+      from { box-shadow: 0 0 10px #00ffff; }
+      to { box-shadow: 0 0 25px #ff00ff; }
+    }
+
+    .contact-box h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    .contact-box p {
+      font-size: 1.5em;
+      color: #ffccff;
+      animation: flicker 1.5s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0% { opacity: 0.7; }
+      100% { opacity: 1; text-shadow: 0 0 15px #ff00ff; }
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-box">
+    <h1>Need Help?</h1>
+    <p>📞 Contact: <strong>8736883934</strong></p>
+  </div>
+</body>
+</html>

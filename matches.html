@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Group Stage Matches</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      background: linear-gradient(135deg, #0f001f, #200040, #300060);
+      animation: rgbFlow 8s infinite linear;
+      font-family: 'Courier New', monospace;
+      color: white;
+      text-align: center;
+    }
+
+    @keyframes rgbFlow {
+      0% { filter: hue-rotate(0deg); }
+      50% { filter: hue-rotate(180deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 40px;
+      text-shadow: 0 0 25px #ff00ff, 0 0 20px #00ffff;
+      animation: pulse 2s infinite alternate;
+    }
+
+    @keyframes pulse {
+      from { opacity: 0.7; transform: scale(1); }
+      to { opacity: 1; transform: scale(1.05); }
+    }
+
+    .group-table {
+      margin: 30px auto;
+      max-width: 600px;
+      border-collapse: collapse;
+      width: 90%;
+      background: linear-gradient(45deg, #1a002a, #2a003f, #330055);
+      box-shadow: 0 0 20px #ff00ff;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .group-table th, .group-table td {
+      padding: 16px;
+      border-bottom: 1px solid #666;
+      font-size: 1.2em;
+    }
+
+    .group-table th {
+      background-color: rgba(255, 0, 255, 0.3);
+      color: #00ffff;
+      text-shadow: 0 0 8px #00ffff;
+    }
+
+    .group-table td {
+      color: #ffe6ff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Group Stage Matches</h1>
+
+  <table class="group-table">
+    <thead><tr><th colspan="2">Group A</th></tr></thead>
+    <tbody>
+      <tr><td>India vs Netherlands</td><td></td></tr>
+      <tr><td>Sri Lanka vs Ireland</td><td></td></tr>
+      <tr><td>India vs Sri Lanka</td><td></td></tr>
+      <tr><td>Ireland vs Netherlands</td><td></td></tr>
+      <tr><td>India vs Ireland</td><td></td></tr>
+      <tr><td>Netherlands vs Sri Lanka</td><td></td></tr>
+    </tbody>
+  </table>
+
+  <table class="group-table">
+    <thead><tr><th colspan="2">Group B</th></tr></thead>
+    <tbody>
+      <tr><td>Australia vs South Africa</td><td></td></tr>
+      <tr><td>New Zealand vs England</td><td></td></tr>
+      <tr><td>Australia vs New Zealand</td><td></td></tr>
+      <tr><td>South Africa vs England</td><td></td></tr>
+      <tr><td>Australia vs England</td><td></td></tr>
+      <tr><td>New Zealand vs South Africa</td><td></td></tr>
+    </tbody>
+  </table>
+
+  <table class="group-table">
+    <thead><tr><th colspan="2">Group C</th></tr></thead>
+    <tbody>
+      <tr><td>Bangladesh vs Canada</td><td></td></tr>
+      <tr><td>Afghanistan vs Bangladesh</td><td></td></tr>
+      <tr><td>West Indies vs Canada</td><td></td></tr>
+      <tr><td>West Indies vs Afghanistan</td><td></td></tr>
+      <tr><td>Canada vs Afghanistan</td><td></td></tr>
+      <tr><td>Bangladesh vs West Indies</td><td></td></tr>
+    </tbody>
+  </table>
+
+  <table class="group-table">
+    <thead><tr><th colspan="2">Group D</th></tr></thead>
+    <tbody>
+      <tr><td>Nepal vs USA</td><td></td></tr>
+      <tr><td>Scotland vs Uganda</td><td></td></tr>
+      <tr><td>USA vs Uganda</td><td></td></tr>
+      <tr><td>Scotland vs Nepal</td><td></td></tr>
+      <tr><td>Uganda vs Nepal</td><td></td></tr>
+      <tr><td>USA vs Scotland</td><td></td></tr>
+<h1 style="margin-top:60px;">Knockout Stage</h1>
+
+<table class="group-table">
+  <thead><tr><th colspan="2">Quarterfinals</th></tr></thead>
+  <tbody>
+    <tr><td>QF1: A1 vs D2</td><td></td></tr>
+    <tr><td>QF2: B1 vs C2</td><td></td></tr>
+    <tr><td>QF3: C1 vs B2</td><td></td></tr>
+    <tr><td>QF4: D1 vs A2</td><td></td></tr>
+  </tbody>
+</table>
+
+<table class="group-table">
+  <thead><tr><th colspan="2">Semifinals</th></tr></thead>
+  <tbody>
+    <tr><td>SF1: Winner QF1 vs Winner QF2</td><td></td></tr>
+    <tr><td>SF2: Winner QF3 vs Winner QF4</td><td></td></tr>
+  </tbody>
+</table>
+
+<table class="group-table">
+  <thead><tr><th colspan="2">Final</th></tr></thead>
+  <tbody>
+    <tr><td>Final: Winner SF1 vs Winner SF2</td><td></td></tr>
+  </tbody>
+</table>
+    </tbody>
+  </table>
+</body>
+</html>
