@@ -46,6 +46,50 @@
       text-align: center;
     }
 
+    .rgb-box {
+      margin-top: 40px;
+      padding: 20px;
+      border-radius: 12px;
+      border: 3px solid white;
+      background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+      background-size: 400% 400%;
+      animation: rgbGlow 5s infinite ease-in-out;
+      box-shadow: 0 0 20px #ff00ff, 0 0 30px #00ffff, 0 0 40px #ffff00;
+      text-align: center;
+      max-width: 600px;
+    }
+
+    @keyframes rgbGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .rgb-box h2 {
+      margin: 0;
+      font-size: 1.6em;
+      color: white;
+      text-shadow: 0 0 10px #000;
+    }
+
+    .rgb-box a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);
+      animation: pulseLink 3s infinite;
+    }
+
+    @keyframes pulseLink {
+      0% { filter: hue-rotate(0deg); }
+      50% { filter: hue-rotate(180deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+
     .link-button {
       margin-top: 25px;
       font-size: 1.3em;
@@ -63,6 +107,12 @@
   <div class="main-title">GET ALL THE STATS OF MATCHES AT ONCE</div>
 
   <div class="stats-note">We will try to write stats when we have the photos of notebook :)</div>
+
+  <!-- ✨ RGB Glowing Box for Match Summary -->
+  <div class="rgb-box">
+    <h2>Netherlands vs Ireland - Netherlands won by 1 wicket</h2>
+    <a href="nethervsirestats.html">View Stats</a>
+  </div>
 
   <a href="table.html" class="link-button">View Points Table</a>
   <a href="captains.html" class="link-button">View Captains of their Team</a>
