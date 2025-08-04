@@ -126,6 +126,15 @@
       50% { filter: hue-rotate(180deg); }
       100% { filter: hue-rotate(360deg); }
     }
+
+    .maintenance-message {
+      margin-top: 30px;
+      font-size: 1.8em;
+      font-weight: bold;
+      animation: pulseGlow 2s infinite alternate;
+      color: #ffcc00;
+      text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ffff00;
+    }
   </style>
 </head>
 <body>
@@ -186,6 +195,11 @@
       <button>Ayush</button>
       <button>Rishabh</button>
     </div>
+
+    <!-- ✨ Under Maintenance Message -->
+    <div class="maintenance-message">
+      🚧 <span>Under Maintenance</span> 🚧
+    </div>
   </div>
 
   <script>
@@ -216,7 +230,6 @@
       document.getElementById("main").classList.remove("hidden");
     }
 
-    // Optional reset for testing (type resetIntro() in console)
     function resetIntro() {
       localStorage.removeItem("skipIntro");
       location.reload();
