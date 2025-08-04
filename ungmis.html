@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uganda Team Info</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #000000, #1a0033);
+      font-family: 'Courier New', monospace;
+      color: white;
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: hueShift 10s infinite linear;
+    }
+
+    @keyframes hueShift {
+      0% { filter: hue-rotate(0deg); }
+      50% { filter: hue-rotate(180deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+
+    .team-title {
+      font-size: 3em;
+      font-weight: bold;
+      text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ffff00;
+      animation: pulseGlow 2s infinite alternate;
+    }
+
+    @keyframes pulseGlow {
+      0% {
+        text-shadow: 0 0 5px #ff00ff, 0 0 10px #00ffff, 0 0 15px #ffff00;
+      }
+      100% {
+        text-shadow: 0 0 20px #ff00ff, 0 0 30px #00ffff, 0 0 40px #ffff00;
+      }
+    }
+
+    .info-box {
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 15px #00ffcc;
+      max-width: 500px;
+      width: 90%;
+      animation: rgbBorder 4s infinite ease-in-out;
+    }
+
+    @keyframes rgbBorder {
+      0% { box-shadow: 0 0 10px red; }
+      25% { box-shadow: 0 0 10px orange; }
+      50% { box-shadow: 0 0 10px lime; }
+      75% { box-shadow: 0 0 10px cyan; }
+      100% { box-shadow: 0 0 10px violet; }
+    }
+
+    .info-box h2 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      color: #ffcc00;
+      text-shadow: 0 0 10px #ffcc00;
+    }
+
+    .info-box p {
+      font-size: 1.2em;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="team-title">🇺🇬 Uganda Team</div>
+
+  <div class="info-box">
+    <h2>Captain</h2>
+    <p>Adi</p>
+  </div>
+</body>
+</html>
