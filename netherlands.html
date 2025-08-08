@@ -81,8 +81,25 @@
       font-size: 1.1em;
     }
 
+    .dropdown {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .dropdown button {
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      border: none;
+      background: linear-gradient(45deg, #00ffcc, #ff00ff);
+      color: black;
+      cursor: pointer;
+      box-shadow: 0 0 10px #fff;
+    }
+
     .success-box {
       margin-top: 20px;
+      display: none;
       background: rgba(0,0,0,0.7);
       padding: 15px;
       border-radius: 10px;
@@ -119,10 +136,19 @@
     <strong>Result:</strong> Qualified
   </div>
 
-  <div class="success-box">
-    <strong>Why was Netherlands successful?</strong><br><br>
-    Netherlands succeeded through sharp fielding, consistent top-order batting, and Ayush’s fearless leadership. Their ability to seize momentum early in matches and maintain pressure throughout made them a formidable force. Team chemistry and disciplined execution were key to their qualification.
+  <div class="dropdown">
+    <button onclick="toggleSuccess()">▼ Why was Netherlands successful?</button>
+    <div id="successBox" class="success-box">
+      Netherlands succeeded through sharp fielding, consistent top-order batting, and Ayush’s fearless leadership. Their ability to seize momentum early in matches and maintain pressure throughout made them a formidable force. Team chemistry and disciplined execution were key to their qualification.
+    </div>
   </div>
+
+  <script>
+    function toggleSuccess() {
+      const box = document.getElementById("successBox");
+      box.style.display = box.style.display === "none" ? "block" : "none";
+    }
+  </script>
 
 </body>
 </html>
