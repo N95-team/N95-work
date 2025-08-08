@@ -39,8 +39,22 @@
       font-size: 1.2em;
     }
 
+    .win-label {
+      text-align: center;
+      font-size: 1.5em;
+      margin-top: 30px;
+      text-shadow: 0 0 10px #00ffcc;
+      animation: pulseGlow 2s infinite;
+    }
+
+    @keyframes pulseGlow {
+      0% { text-shadow: 0 0 5px #00ffcc; }
+      50% { text-shadow: 0 0 20px #00ffcc; }
+      100% { text-shadow: 0 0 5px #00ffcc; }
+    }
+
     .bar-container {
-      margin: 30px auto;
+      margin: 10px auto 30px;
       max-width: 600px;
       background: rgba(255,255,255,0.1);
       border-radius: 10px;
@@ -103,6 +117,8 @@
 
   <div class="match-box">Sri Lanka vs Ireland – Sri Lanka won</div>
   <div class="match-box">Sri Lanka vs India – Sri Lanka won</div>
+
+  <div class="win-label">🟢 100% Win</div>
 
   <div class="bar-container">
     <div class="bar">
