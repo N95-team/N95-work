@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netherlands Team</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 30px;
+      font-family: 'Courier New', monospace;
+      color: white;
+      background: linear-gradient(270deg, red, orange, yellow, green, cyan, blue, violet);
+      background-size: 1400% 1400%;
+      animation: rgbBackground 20s infinite linear;
+    }
+
+    @keyframes rgbBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      text-shadow: 0 0 15px #00ffff;
+    }
+
+    .match-box {
+      background: rgba(0,0,0,0.6);
+      border: 2px solid #fff;
+      border-radius: 12px;
+      padding: 15px;
+      margin: 20px auto;
+      max-width: 600px;
+      box-shadow: 0 0 15px #ff00ff;
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    .win-label {
+      text-align: center;
+      font-size: 1.5em;
+      margin-top: 30px;
+      text-shadow: 0 0 10px #00ffcc;
+      animation: pulseGlow 2s infinite;
+    }
+
+    @keyframes pulseGlow {
+      0% { text-shadow: 0 0 5px #00ffcc; }
+      50% { text-shadow: 0 0 20px #00ffcc; }
+      100% { text-shadow: 0 0 5px #00ffcc; }
+    }
+
+    .bar-container {
+      margin: 10px auto 30px;
+      max-width: 600px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px #00ffff;
+    }
+
+    .bar {
+      height: 30px;
+      display: flex;
+    }
+
+    .win { background: lime; width: 100%; }
+    .loss { background: red; width: 0%; }
+    .draw { background: grey; width: 0%; }
+
+    .info-box {
+      margin: 30px auto;
+      max-width: 600px;
+      background: rgba(0,0,0,0.6);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 15px #00ffcc;
+      font-size: 1.1em;
+    }
+
+    .success-box {
+      margin-top: 20px;
+      background: rgba(0,0,0,0.7);
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ffcc;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🇳🇱 Netherlands Team Overview</h1>
+
+  <div class="match-box">Netherlands vs India – Netherlands won</div>
+  <div class="match-box">Netherlands vs Ireland – Netherlands won</div>
+
+  <div class="win-label">🟢 100% Win</div>
+
+  <div class="bar-container">
+    <div class="bar">
+      <div class="win"></div>
+      <div class="loss"></div>
+      <div class="draw"></div>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <strong>Captain:</strong> Ayush<br><br>
+    Ayush is a dynamic and fearless captain who leads with passion and precision. His aggressive field placements and bold batting orders have turned tight matches into victories. He inspires confidence in his teammates and brings a tactical edge that keeps opponents guessing.
+    <br><br>
+    <strong>Standing:</strong> 2nd (Group A)<br>
+    <strong>Result:</strong> Qualified
+  </div>
+
+  <div class="success-box">
+    <strong>Why was Netherlands successful?</strong><br><br>
+    Netherlands succeeded through sharp fielding, consistent top-order batting, and Ayush’s fearless leadership. Their ability to seize momentum early in matches and maintain pressure throughout made them a formidable force. Team chemistry and disciplined execution were key to their qualification.
+  </div>
+
+</body>
+</html>
