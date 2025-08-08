@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Zealand Team</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 30px;
+      font-family: 'Courier New', monospace;
+      color: white;
+      background: linear-gradient(270deg, red, orange, yellow, green, cyan, blue, violet);
+      background-size: 1400% 1400%;
+      animation: rgbBackground 20s infinite linear;
+    }
+
+    @keyframes rgbBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      text-shadow: 0 0 15px #00ffff;
+    }
+
+    .match-box {
+      background: rgba(0,0,0,0.6);
+      border: 2px solid #fff;
+      border-radius: 12px;
+      padding: 15px;
+      margin: 20px auto;
+      max-width: 600px;
+      box-shadow: 0 0 15px #ff0000;
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    .mixed-label {
+      text-align: center;
+      font-size: 1.5em;
+      margin-top: 30px;
+      text-shadow: 0 0 10px #ff0000;
+      animation: pulseGlow 2s infinite;
+    }
+
+    @keyframes pulseGlow {
+      0% { text-shadow: 0 0 5px #ff0000; }
+      50% { text-shadow: 0 0 20px #ff0000; }
+      100% { text-shadow: 0 0 5px #ff0000; }
+    }
+
+    .bar-container {
+      margin: 10px auto 30px;
+      max-width: 600px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px #ff0000;
+    }
+
+    .bar {
+      height: 30px;
+      display: flex;
+    }
+
+    .win { background: lime; width: 0%; }
+    .loss { background: red; width: 100%; }
+    .draw { background: grey; width: 0%; }
+
+    .info-box {
+      margin: 30px auto;
+      max-width: 600px;
+      background: rgba(0,0,0,0.6);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 15px #ff0000;
+      font-size: 1.1em;
+    }
+
+    .dropdown {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .dropdown button {
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      border: none;
+      background: linear-gradient(45deg, #ff0000, #660000);
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 0 10px #fff;
+    }
+
+    .status-box {
+      margin-top: 20px;
+      display: none;
+      background: rgba(0,0,0,0.7);
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ff0000;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🇳🇿 New Zealand Team Overview</h1>
+
+  <div class="match-box">New Zealand vs England – England won</div>
+  <div class="match-box">New Zealand vs Australia – Australia won</div>
+
+  <div class="mixed-label">🔴 0 Won / 2 Lost / 0 Draw – 100% Lost</div>
+
+  <div class="bar-container">
+    <div class="bar">
+      <div class="win"></div>
+      <div class="loss"></div>
+      <div class="draw"></div>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <strong>Captain:</strong> Kushagra<br><br>
+    Kushagra led New Zealand with determination, but the team struggled to find momentum. Despite his tactical awareness, the squad couldn’t convert opportunities into wins. With two consecutive losses, New Zealand’s campaign ended prematurely.
+    <br><br>
+    <strong>Standing:</strong> 4th (Group B)<br>
+    <strong>Result:</strong> Disqualified
+  </div>
+
+  <div class="dropdown">
+    <button onclick="toggleStatus()">▼ What happened to New Zealand?</button>
+    <div id="statusBox" class="status-box">
+      New Zealand’s journey in the tournament was short-lived. Losses to both England and Australia sealed their fate. Their batting lineup faltered under pressure, and the bowling lacked bite. Despite Kushagra’s leadership, the team couldn’t recover, leading to their disqualification from Group B.
+    </div>
+  </div>
+
+  <script>
+    function toggleStatus() {
+      const box = document.getElementById("statusBox");
+      box.style.display = box.style.display === "none" ? "block" : "none";
+    }
+  </script>
+
+</body>
+</html>
