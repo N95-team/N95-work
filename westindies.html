@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>West Indies Team</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Courier New', monospace;
+      background: linear-gradient(270deg, red, orange, yellow, green, cyan, blue, violet);
+      background-size: 1400% 1400%;
+      animation: rgbBackground 20s infinite linear;
+    }
+
+    @keyframes rgbBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .text {
+      font-size: 2.5em;
+      color: white;
+      text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+      animation: glowText 2s infinite alternate;
+    }
+
+    @keyframes glowText {
+      from {
+        text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+      }
+      to {
+        text-shadow: 0 0 20px #ffff00, 0 0 30px #ff00ff;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="text">🏝️ No Activities Tracked</div>
+</body>
+</html>
