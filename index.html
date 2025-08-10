@@ -141,7 +141,14 @@
       }
 
       if (pass === storedPass) {
-        window.location.href = "index3.html";
+        let page = user.toLowerCase()
+          .replace(/\s+/g, "")       // Remove spaces
+          .replace(/[()]/g, "")      // Remove parentheses
+          .replace(/[^a-z0-9]/g, ""); // Remove special characters
+
+        if (user === "Aarav Pastor (Creator)") page = "aaravpro";
+
+        window.location.href = `${page}.html`;
       } else {
         message.innerText = "Password is incorrect";
       }
@@ -151,7 +158,6 @@
       window.location.href = "index2.html";
     }
 
-    // Dynamic Button Logic: Create or Forgot Password
     const loginBox = document.getElementById("loginBox");
 
     const createBtn = document.createElement("button");
@@ -169,7 +175,6 @@
     document.getElementById("username").addEventListener("input", function () {
       const name = this.value.trim();
 
-      // Remove both buttons first
       if (loginBox.contains(createBtn)) loginBox.removeChild(createBtn);
       if (loginBox.contains(forgotBtn)) loginBox.removeChild(forgotBtn);
 
