@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forgot Password</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #0ff;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+    .box {
+      margin: 30px auto;
+      padding: 20px;
+      border: 2px solid #0ff;
+      width: 60%;
+      border-radius: 8px;
+      background: rgba(0, 255, 255, 0.05);
+    }
+    input[type="text"] {
+      padding: 10px;
+      margin: 10px;
+      width: 60%;
+      border: none;
+      border-bottom: 2px solid #0ff;
+      background: transparent;
+      color: #fff;
+      font-size: 16px;
+    }
+    label {
+      font-size: 16px;
+      color: #0ff;
+    }
+    button, a.button-link {
+      padding: 10px 20px;
+      background: #0ff;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+      display: inline-block;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+    button:hover, a.button-link:hover {
+      transform: scale(1.05);
+    }
+    #message {
+      color: red;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>🔐 Forgot Password Verification</h2>
+    <input type="text" id="username" placeholder="Enter your username">
+    <br>
+    <label>
+      <input type="checkbox" id="robotCheck"> I am not a robot 🤖
+    </label>
+    <br>
+    <button onclick="verify()">Verify</button>
+    <p id="message"></p>
+    <hr style="margin-top: 30px; border-color: #0ff;">
+    <p>📞 Contact <strong>8736883934</strong> on WhatsApp for help</p>
+    <p>Want to create a new password?</p>
+    <a href="createnew.html" class="button-link">Create New Password</a>
+  </div>
+
+  <script>
+    function verify() {
+      const user = document.getElementById("username").value.trim();
+      const robot = document.getElementById("robotCheck").checked;
+      const message = document.getElementById("message");
+
+      if (!user) {
+        message.textContent = "Please enter your username.";
+        return;
+      }
+
+      if (!robot) {
+        message.textContent = "Please confirm you're not a robot.";
+        return;
+      }
+
+      const storedPass = localStorage.getItem(`user_${user}`);
+      if (storedPass === null) {
+        message.textContent = "No password found for this username.";
+      } else {
+        message.style.color = "lime";
+        message.textContent = "Verification successful. You may proceed.";
+      }
+    }
+  </script>
+</body>
+</html>
