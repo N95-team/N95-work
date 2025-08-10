@@ -38,19 +38,21 @@
       border: none;
       cursor: pointer;
       margin: 10px;
+      transition: transform 0.2s ease;
+    }
+    button:hover {
+      transform: scale(1.05);
     }
     #message {
       color: red;
       font-weight: bold;
     }
-
     @keyframes fadeSlide {
       0% { opacity: 0; transform: translateY(-20px); }
       20% { opacity: 1; transform: translateY(0); }
       80% { opacity: 1; transform: translateY(0); }
       100% { opacity: 0; transform: translateY(20px); }
     }
-
     .slideshow {
       font-size: 32px;
       color: #0ff;
@@ -76,7 +78,7 @@
   </div>
 
   <div class="box" id="loginBox">
-    <h2>🔐 Login(Under Maintenence click skip to proceed)</h2>
+    <h2>🔐 Login</h2>
     <input type="text" id="username" placeholder="Enter username">
     <br>
     <input type="password" id="password" placeholder="Enter password">
@@ -113,6 +115,14 @@
       document.getElementById("loginBox").style.display = "block";
     }, 12000);
 
+    const validUsers = [
+      "Aryan Upadhyay", "Tejas Gupta", "Shreyash Shukhla", "Akshit Shukhla",
+      "Aarav Pastor (Creator)", "Arsh Singh", "Isaan", "Adavya", "Shaurya",
+      "Kushagra Gowsami", "Zamam Haider", "Earth Ahuja", "Neerav Kumar",
+      "Darsh Srivastava", "Subh", "Akkie", "Vignesh", "Akshit Jha",
+      "Ayush", "Rishabh"
+    ];
+
     function login() {
       const user = document.getElementById('username').value.trim();
       const pass = document.getElementById('password').value.trim();
@@ -132,6 +142,27 @@
     function skip() {
       window.location.href = "index2.html";
     }
+
+    // Create Password Button Logic
+    const loginBox = document.getElementById("loginBox");
+    const createBtn = document.createElement("button");
+    createBtn.textContent = "Create a Password";
+    createBtn.onclick = () => window.location.href = "password.html";
+    createBtn.style.float = "right";
+    createBtn.style.marginRight = "20%";
+
+    document.getElementById("username").addEventListener("input", function () {
+      const name = this.value.trim();
+      if (validUsers.includes(name)) {
+        if (!loginBox.contains(createBtn)) {
+          loginBox.appendChild(createBtn);
+        }
+      } else {
+        if (loginBox.contains(createBtn)) {
+          loginBox.removeChild(createBtn);
+        }
+      }
+    });
   </script>
 </body>
 </html>
