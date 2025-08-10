@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create New Password</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #0ff;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+    .box {
+      margin: 30px auto;
+      padding: 20px;
+      border: 2px solid #0ff;
+      width: 60%;
+      border-radius: 8px;
+      background: rgba(0, 255, 255, 0.05);
+    }
+    input[type="text"], input[type="password"] {
+      padding: 10px;
+      margin: 10px;
+      width: 60%;
+      border: none;
+      border-bottom: 2px solid #0ff;
+      background: transparent;
+      color: #fff;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #0ff;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: transform 0.2s ease;
+    }
+    button:hover {
+      transform: scale(1.05);
+    }
+    #message {
+      color: red;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>🔄 Reset Your Password</h2>
+    <input type="text" id="username" placeholder="Enter your username">
+    <br>
+    <input type="password" id="currentPassword" placeholder="Enter current password">
+    <br>
+    <input type="password" id="newPassword" placeholder="Enter new password">
+    <br>
+    <input type="password" id="confirmNewPassword" placeholder="Confirm new password">
+    <br>
+    <button onclick="resetPassword()">Update Password</button>
+    <p id="message"></p>
+  </div>
+
+  <script>
+    function resetPassword() {
+      const user = document.getElementById("username").value.trim();
+      const current = document.getElementById("currentPassword").value;
+      const newPass = document.getElementById("newPassword").value;
+      const confirmPass = document.getElementById("confirmNewPassword").value;
+      const message = document.getElementById("message");
+
+      if (!user || !current || !newPass || !confirmPass) {
+        message.textContent = "Please fill in all fields.";
+        return;
+      }
+
+      const storedPass = localStorage.getItem(`user_${user}`);
+      if (storedPass === null) {
+        message.textContent = "Username not found.";
+        return;
+      }
+
+      if (storedPass !== current) {
+        message.textContent = "Current password is incorrect.";
+        return;
+      }
+
+      if (newPass !== confirmPass) {
+        message.textContent = "New passwords do not match.";
+        return;
+      }
+
+      localStorage.setItem(`user_${user}`, newPass);
+      message.style.color = "lime";
+      message.textContent = "Password updated successfully! Redirecting...";
+
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
