@@ -126,16 +126,24 @@
     function login() {
       const user = document.getElementById('username').value.trim();
       const pass = document.getElementById('password').value.trim();
+      const message = document.getElementById("message");
 
       if (user === "" || pass === "") {
-        document.getElementById("message").innerText = "Please enter both username and password.";
+        message.innerText = "Please enter both username and password.";
         return;
       }
 
-      if (pass === user) {
+      const storedPass = localStorage.getItem(`user_${user}`);
+
+      if (storedPass === null) {
+        message.innerText = "Username not found. Please create a password first.";
+        return;
+      }
+
+      if (pass === storedPass) {
         window.location.href = "index3.html";
       } else {
-        document.getElementById("message").innerText = "Password is incorrect";
+        message.innerText = "Password is incorrect";
       }
     }
 
