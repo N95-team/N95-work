@@ -151,24 +151,36 @@
       window.location.href = "index2.html";
     }
 
-    // Create Password Button Logic
+    // Dynamic Button Logic: Create or Forgot Password
     const loginBox = document.getElementById("loginBox");
+
     const createBtn = document.createElement("button");
     createBtn.textContent = "Create a Password";
     createBtn.onclick = () => window.location.href = "password.html";
     createBtn.style.float = "right";
     createBtn.style.marginRight = "20%";
 
+    const forgotBtn = document.createElement("button");
+    forgotBtn.textContent = "Forgot Password";
+    forgotBtn.onclick = () => window.location.href = "forgotpass.html";
+    forgotBtn.style.float = "right";
+    forgotBtn.style.marginRight = "20%";
+
     document.getElementById("username").addEventListener("input", function () {
       const name = this.value.trim();
-      if (validUsers.includes(name)) {
-        if (!loginBox.contains(createBtn)) {
-          loginBox.appendChild(createBtn);
-        }
+
+      // Remove both buttons first
+      if (loginBox.contains(createBtn)) loginBox.removeChild(createBtn);
+      if (loginBox.contains(forgotBtn)) loginBox.removeChild(forgotBtn);
+
+      if (!validUsers.includes(name)) return;
+
+      const hasPassword = localStorage.getItem(`user_${name}`) !== null;
+
+      if (hasPassword) {
+        loginBox.appendChild(forgotBtn);
       } else {
-        if (loginBox.contains(createBtn)) {
-          loginBox.removeChild(createBtn);
-        }
+        loginBox.appendChild(createBtn);
       }
     });
   </script>
